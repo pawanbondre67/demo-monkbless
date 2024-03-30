@@ -153,20 +153,17 @@ header{
   width: 100vw;
   object-fit: cover;
   position: relative;
-  /* background: #975555; */
   padding: 0px;
   overflow: hidden;
 }
 
 video{
-  /* position: absolute;
-  top: 0;
-  left: 0; */
+
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
 }
 
 
@@ -178,8 +175,7 @@ video{
   overflow: auto;
   width: 100%;
   height: max-content;
-  /* background-color: red; */
-
+  
 }
 .home__content__left img{
   height: 21rem;
@@ -214,12 +210,11 @@ video{
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  flex-direction: column;
+  /* flex-direction: column; */
   padding: 4rem 1rem 3rem;
   gap: 3rem;
   overflow: hidden;
   width: 100%;
-  /* height: 20%; */
   background-color: #f4f3f3;
   position: relative;
 }
@@ -240,28 +235,26 @@ video{
 .carousel__container {
   /* background-color: grey; */
   width: 100%;
-  /* margin: 50px; */
   height: 100%;
   height: max-content;
-  padding:  50px
+  margin-top: 10px;
+  
 
  
   
   
 }
 
-@media screen and (max-width: 500px) {
-  .home__content-2{
-    padding: 2rem 1rem 1.5rem;
-  }
-  .carousel__content {
-  
-    padding: 10px 55px;
-    height: 300px;
-  }
 
- 
+@media only screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important; /* Important to override any inline styles */
+  }
 }
+
+
+
 .carousel__content{
   /* background-color: red; */
   overflow: hidden;
@@ -305,17 +298,136 @@ video{
   top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: white;
   z-index: 2;
 }
 
-/* swiper class */
 
-.btn {
-  color: rgb(255, 47, 0);
-  display: none;
+
+/* card2 */
+
+.card1 {
+  position: relative;
+  width: 280px;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid rgba(230, 230, 230, 1)
 
 }
+
+.card-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.img-content{
+   width: 100%;
+   height: 240px;
+   position: relative;
+}
+.like-btn{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 15px;
+  left: 229.62px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.card-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 86px; */
+  padding: 10px;
+}
+
+.card-details{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 6px;
+}
+
+.card-content .product-title{
+  font-size: 18px;
+  font-weight: 600;
+}
+.card-content .product-description{
+  margin: 0;
+  font-size: 15px;
+  color: rgb(100, 100, 93);
+}
+
+.card-content .product-price span{
+  font-size: 10px;
+  font-weight: 500;
+  
+}
+
+
+.ratings{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 15px 0;
+  
+}
+.ratings i{
+  font-size: 16px;
+  color: #f1c40f;
+}
+.ratings .rating-count{
+color: rgba(119, 135, 143, 1);
+}
+
+/* swiper class */
+
+
+/* .swiper-btn{
+  height: 70px;
+  width: 70px;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid #7CA0C1;
+  border-radius: 50%;
+  
+  
+  color: #7CA0C1;
+  transition: color 0.3s ease;
+}
+
+.swiper-btn:hover{
+  color: white;
+  background-color: #7CA0C1;
+
+}
+
+
+.swiper-button-next{
+  height: initial;
+  width: initial;
+  font-size: 2rem;
+
+} */
+
+
+
+
+
+
+
+
 
