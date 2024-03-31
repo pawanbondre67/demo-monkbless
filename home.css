@@ -313,9 +313,12 @@ video{
   width: 280px;
   background-color: #fff;
   overflow: hidden;
-  border: 1px solid rgba(230, 230, 230, 1)
+  border: 1px solid rgba(230, 230, 230, 1);
+  position: relative;
 
 }
+
+
 
 .card-image{
   width: 100%;
@@ -326,14 +329,14 @@ video{
 .img-content{
    width: 100%;
    height: 240px;
-   position: relative;
+   
 }
 .like-btn{
   position: absolute;
   height: 40px;
   width: 40px;
-  top: 15px;
-  left: 229.62px;
+  top: 0.938rem;
+  left: 14.351rem;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
@@ -424,10 +427,33 @@ color: rgba(119, 135, 143, 1);
 } */
 
 
+.scrollable-content{
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+}
+.box{
+  height: 158px;
+  width: 158px;
+  border: 2px solid #7CA0C1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 21px;
+  border-radius: 10px;
 
-
-
-
-
-
-
+}
+/* @media screen and (max-width: 768px){
+  .box{
+    width: 200px;
+    padding: 10px;
+  }
+} */
+.box-logo{
+  object-fit: cover;
+}
+.box-content{
+  font-size:1.2rem;
+}
