@@ -307,6 +307,105 @@ video{
 
 
 /* card2 */
+/* -------fragnance section------- */
+.home__content-3 .heading{
+  margin-bottom: 1rem;
+}
+.fragnance-container{
+ 
+  padding: 4rem;
+  background-color: #7ca0c133;
+
+}
+.fragnance-box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+.fragnance-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  
+}
+
+.container-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  /* padding-right: 4rem; */
+
+}
+.fragrance-description{
+  width: min(100%, 500px);
+}
+
+.explore-btn{
+  width: 234px;
+  height: 56px;
+  gap: 10px;
+  border-radius: 4px;
+  opacity: 0px;
+  border: none;
+  background-color: #7ca0c1;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+.scroll-content{
+  padding: 4rem 5rem;
+}
+
+@keyframes slide{
+  from{
+    transform: translateX(0);
+    
+  }
+  to{
+    transform: translateX(-100%);
+
+  }
+
+}
+.scrollable-container{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+.scrollable-box{
+  display: flex;
+  gap: 1.3rem;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+  animation: slide 20s linear infinite;
+}
+.box{
+  height: 158px;
+  width: 158px;
+  border: 2px solid #7CA0C1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 21px;
+  border-radius: 10px;
+
+}
+
+.box-logo{
+  object-fit: cover;
+}
+.box-content{
+  font-size:1.2rem;
+}
+
 
 .card1 {
   position: relative;
@@ -427,33 +526,5 @@ color: rgba(119, 135, 143, 1);
 } */
 
 
-.scrollable-content{
-  display: flex;
-  gap: 10px;
-  overflow: auto;
-  padding: 1rem 1.5rem;
-}
-.box{
-  height: 158px;
-  width: 158px;
-  border: 2px solid #7CA0C1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 21px;
-  border-radius: 10px;
 
-}
-/* @media screen and (max-width: 768px){
-  .box{
-    width: 200px;
-    padding: 10px;
-  }
-} */
-.box-logo{
-  object-fit: cover;
-}
-.box-content{
-  font-size:1.2rem;
-}
+
