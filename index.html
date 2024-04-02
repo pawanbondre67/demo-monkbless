@@ -291,69 +291,66 @@
           </div>
 
           <div class="scroll-content">
-          <h1 class="heading">Why Trust Us?</h1>
+            <h1 class="heading">Why Trust Us?</h1>
 
-          <div class="scrollable-container">
-          <div class="scrollable-box">
-            <div class="box">
-              <div class="box-logo">
-                <img src="image 7.png" alt="" />
-              </div>
-              <div class="box-content">
-                <span>100% Vegan</span>
-              </div>
-            </div>
+            <div class="scroller">
+              <div class="box-list scroller-box">
+                <div class="box">
+                  <div class="box-logo">
+                    <img src="image 7.png" alt="" />
+                  </div>
+                  <div class="box-content">
+                    <span>100% Vegan</span>
+                  </div>
+                </div>
 
-            <div class="box">
-              <div class="box-logo">
-                <img src="image 4.png" alt="" />
-              </div>
-              <div class="box-content">
-                <span>Premium Quality</span>
-              </div>
-            </div>
+                <div class="box">
+                  <div class="box-logo">
+                    <img src="image 4.png" alt="" />
+                  </div>
+                  <div class="box-content">
+                    <span>Premium Quality</span>
+                  </div>
+                </div>
 
-            <div class="box">
-              <div class="box-logo">
-                <img src="image 2.png" alt="" />
-              </div>
-              <div class="box-content">
-                <span>Cruelty Free</span>
-              </div>
-            </div>
+                <div class="box">
+                  <div class="box-logo">
+                    <img src="image 2.png" alt="" />
+                  </div>
+                  <div class="box-content">
+                    <span>Cruelty Free</span>
+                  </div>
+                </div>
 
-            <div class="box">
-              <div class="box-logo">
-                <img src="image 1.png" alt="" />
-              </div>
-              <div class="box-content">
-                <span>Long Lasting</span>
-              </div>
-            </div>
+                <div class="box">
+                  <div class="box-logo">
+                    <img src="image 1.png" alt="" />
+                  </div>
+                  <div class="box-content">
+                    <span>Long Lasting</span>
+                  </div>
+                </div>
 
+                <div class="box">
+                  <div class="box-logo">
+                    <img src="image 4.png" alt="" />
+                  </div>
+                  <div class="box-content">
+                    <span>Variety of Fragnance</span>
+                  </div>
+                </div>
 
-            <div class="box">
-              <div class="box-logo">
-                <img src="image 4.png" alt="" />
-              </div>
-              <div class="box-content">
-                <span>Variety of Fragnance</span>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="box-logo">
-                <img src="image 6.png" alt="" />
-              </div>
-              <div class="box-content">
-                <span>Derma Tested</span>
+                <div class="box">
+                  <div class="box-logo">
+                    <img src="image 6.png" alt="" />
+                  </div>
+                  <div class="box-content">
+                    <span>Derma Tested</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-        </div>
-        </div>
-
 
           <div class="carousel__container swiper">
             <div class="carousel__content">
@@ -497,6 +494,28 @@
 
     <script src="script.js"></script>
     <script src="swiper-bundle.min.js"></script>
+    <script>
+      // scroller
+      const scrollers = document.querySelectorAll(".scroller");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+      }
+
+      function addAnimation() {
+        scrollers.forEach((scroller) => {
+          scroller.setAttribute("data-animated", true);
+
+          const scrollerBox = scroller.querySelector(".scroller-box");
+          const scrollerContent = Array.from(scrollerBox.children);
+
+          scrollerContent.forEach((item) => {
+            const duplicateItem = item.cloneNode(true);
+            duplicateItem.setAttribute("aria-hidden", true);
+            scrollerBox.appendChild(duplicateItem);
+          });
+        });
+      }
+    </script>
     <script>
       const swiperCards = new Swiper(".carousel__content", {
         loop: true,

@@ -358,54 +358,79 @@ video{
 }
 
 .scroll-content{
-  padding: 4rem 5rem;
+  padding: 4rem 4rem;
+ 
+  background: rgba(255, 255, 255, 1);
+
 }
 
-@keyframes slide{
-  from{
-    transform: translateX(0);
-    
+
+.scroller{
+  width: 98%;
+  overflow: hidden ;
+  /* background-color: lime; */
+
+}
+.scroller[data-animated = "true"]{
+  /* overflow: hidden; */
+  mask: linear-gradient(90deg,transparent,white 10% ,white 90%,transparent);
+}
+.scroller[data-animated = "true"] .scroller-box{
+  flex-wrap: nowrap;
+  animation: slide 19s linear infinite;
+}
+@keyframes
+  slide{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(calc(-50% - 0.5rem));
+    }
   }
-  to{
-    transform: translateX(-100%);
 
-  }
-
-}
-.scrollable-container{
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-}
-.scrollable-box{
+  
+.scroller-box{
   display: flex;
   gap: 1.3rem;
-  overflow: auto;
-  padding: 1rem 1.5rem;
-  animation: slide 20s linear infinite;
+ padding-block: 1rem;
+  /* animation: slide 20s linear infinite; */
 }
 .box{
   height: 158px;
   width: 158px;
-  border: 2px solid #7CA0C1;
+  /* border: 2px solid #7CA0C1; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 21px;
+  padding: 20px;
   border-radius: 10px;
+  aspect-ratio: 1/1;
 
 }
 
 .box-logo{
   object-fit: cover;
+
 }
 .box-content{
   font-size:1.2rem;
+  /* align-self: center; */
+  
+  
 }
 
+
+.box-list > :nth-child(2n){
+ background: rgba(124, 160, 193, 0.1);
+}
+
+.box-list > :nth-child(2n+1){
+  background: rgba(255, 255, 255, 1);
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.075);
+
+}
 
 .card1 {
   position: relative;
