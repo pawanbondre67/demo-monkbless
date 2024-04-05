@@ -1,0 +1,145 @@
+.main-conatiner{
+    display: flex;
+    height: 447px;
+    width: 912px;
+    border: 1px solid black;
+    background-color: #7CA0C1;
+    border-radius: 16px;
+    padding: 16.8px;
+}
+.left-cont{
+    height: 413px;
+    width: 537px;
+}
+
+#Monkbless{
+    margin-top: 25px;
+    margin-left: 40px;
+    font-weight: 400;
+    font-size: 40px;
+    color: black;
+}
+#offers{
+    margin-top: 70px;
+    margin-left: 48px;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.three-cont{
+    height: 198px;
+    width: 505px;
+    margin-top: 50px;
+    margin-left: 16px;
+    gap: 16px;
+    display: flex;
+    
+}
+.first-cont{
+    width: 157px;
+    height: 142px;
+    border: 1px solid black;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    background-color: #497eaf;
+}
+.src{
+    width: 26px;
+    border-radius: 100%;
+    background-color: #26537e;    ;
+
+}
+
+.first-cont p{
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+.right-cont{
+    height: 376px;
+    width: 325px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 32px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+.login{
+    font-weight: 700;
+    font-size: 20px;
+    /* align-items: center; */
+    color: black;
+    
+}
+.mobile{
+    font-weight: 400;
+    font-size: 14px;
+    color: #667085;
+}
+.input-mob-num{
+    height: 43px;
+    width: 261px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD ;
+}
+.notify{
+    display: flex;
+    gap: 5px;
+}
+.notify-text{
+    font-weight: 400;
+    font-size: 16px;
+    color: #667085;
+}
+
+.or{
+    display: flex;
+    gap: 20px;
+}
+.line-width{
+    width: 60px;
+    height: 1px;
+    border: 0px, 0px, 0.8px, 0px;
+    background-color: black;
+    margin-top: 22px;
+}
+.whatsapp-btn{
+    width: 261px;
+    height: 41px;
+    border-radius: 8px;
+    padding: 8.8px, 54.2px, 8.8px, 54.19px;
+    border: 1px solid #25D366    ;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+.whatsapp{
+    width: 21px;
+    height: 20px;
+}
+.policy-text-1{
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 30px;
+    align-items: center;
+    color: #98A2B3;
+}
+.policy-text-2{
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: -10px;
+    align-items: center;
+    color: #98A2B3;
+}
